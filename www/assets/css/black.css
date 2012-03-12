@@ -1,0 +1,782 @@
+@charset utf-8;
+
+/* CSS Document */
+/* ====================================================================================================                                                                
+
+	Table of Content
+
+	
+
+	1. General
+
+	2. Defaults - Copy into admin.css
+
+	3. Header
+
+	4. Navigation
+
+	5. Content
+
+	6. Blog Template
+
+	7. Print Template
+
+	8. Buttons
+
+	9. Footer
+
+   10. Clear Fix	
+
+   11. Vin65 Overrides
+
+   
+
+*/
+
+
+/*   ===================================================================================================                                                                
+
+     1. General
+
+======================================================================================================== */
+
+html,body {
+	height:100%;
+	width:100%;
+	position:relative;
+	margin:0;
+	padding:0;
+	}
+
+/*   ===================================================================================================                                                                
+
+     2. Defaults - These get copied into the admin.css
+
+======================================================================================================== */
+
+body {
+	background-color:#000;
+	font-size:12px;
+	color:#fff;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	}
+
+/* CSS Reset */
+img {
+	border:0;
+	}
+
+h1,h2,h3,h4,h5,h6,p,table,ul,ol {
+	margin-top:0;
+	padding-top:0;
+	}
+
+ul,ol,dl,p,table,pre {
+	margin-bottom:1em;
+	}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:400;
+	color:#fff;
+	font-family:"Times New Roman", Times, serif;
+	}
+
+h1 {
+	font-size:2.5em;
+	line-height:1em;
+	margin-bottom:.5em;
+	}
+
+/* 30pt  */
+h2 {
+	font-size:2em;
+	line-height:1em;
+	margin-bottom:.5em;
+	}
+
+/* 24pt */
+h3 {
+	font-size:1.5em;
+	line-height:1em;
+	margin-bottom:.5em;
+	}
+
+/* 18pt */
+h4 {
+	font-size:1.167em;
+	line-height:1em;
+	}
+
+/* 14pt */
+h5 {
+	font-size:1em;
+	line-height:1em;
+	font-weight:700;
+	}
+
+h6 {
+	font-size:1em;
+	line-height:1em;
+	}
+
+a {
+	color:#fff;
+	text-decoration:none;
+	}
+
+a:hover,a:focus,a:active {
+	color:#fff;
+	text-decoration:underline;
+	}
+
+ul,ol,dd,blockquote {
+	}
+
+ul ul,ol ol,ul ol,ol ul {
+	margin-bottom:0;
+	}
+
+form {
+	margin-bottom:1em;
+	}
+
+legend {
+	color:#ccc;
+	}
+
+hr {
+	color:#eee;
+	background-color:#eee;
+	height:1px;
+	border:0;
+	}
+
+/*-----------------------------------------------------------*/
+.layClear {
+	clear:both;
+	font-size:0;
+	height:1px;
+	line-height:0;
+	margin-top:-1px;
+	}
+
+/*   ===================================================================================================                                                                
+
+     3. Header
+
+======================================================================================================== */
+
+#header {
+	position:relative;
+	width:855px;
+	height:160px;
+	}
+
+	#logo {
+		height:150px;
+		overflow:hidden;
+		text-align:center;
+		margin:15px 0 0;
+		}
+
+	#user-toolsWrapper {
+		position:absolute;
+		top:200px;
+		right:0;
+		z-index:1000;
+		}
+	
+		#user-tools {
+			width:300px;
+			line-height:24px;
+			height:24px;
+			}
+		
+		#user-tools a {
+			color:#fff;
+			}
+	
+
+/*   ===================================================================================================                                                                
+
+     4. Navigation
+
+======================================================================================================== */
+
+#topMenu {
+	width:850px;
+	height:32px;
+	z-index:1200;
+	}
+
+	#topMenu ul {
+		float:left;
+		left:50%;
+		position:relative;
+		list-style:none;
+		margin:0;
+		padding:0;
+		}
+	
+		#topMenu ul li {
+			right:50%;
+			position:relative;
+			float:left;
+			margin:0;
+			padding:0;
+			}
+		
+			#topMenu ul li a {
+				line-height:32px;
+				height:32px;
+				color:#666;
+				position:relative;
+				display:inline-block;
+				text-decoration:none;
+				margin:0;
+				padding:0 35px;
+				font-size:1.3em;
+				text-transform:uppercase;
+				}
+			
+				#topMenu ul li a:hover {
+					color:#000;
+					background-color:#ccc;
+					text-decoration:none;
+					}
+				
+				#topMenu ul li a.hover {
+					color:#000;
+					background-color:#ccc;
+					text-decoration:none;
+					}
+
+		#topMenu li ul {
+			display:none;
+			position:absolute;
+			top:32px;
+			left:0;
+			width:180px;
+			background-color:#9da985;
+			}
+		
+		#topMenu li:hover ul,#layTopMenu li.over ul {
+			display:block;
+			z-index:1500;
+			}
+		
+			#topMenu li ul li {
+				background-color:#ccc;
+				display:block;
+				width:180px;
+				float:none;
+				text-align:left;
+				right:0;
+				}
+			
+				#topMenu li ul li a {
+					color:#000;
+					background-color:#ccc;
+					float:none;
+					display:block;
+					padding:0 0 0 10px;
+					margin:0;
+					width:170px;
+					text-align:left;
+					text-transform:none;
+					line-height:24px;
+					height:24px;
+					}
+		
+				#topMenu li ul li a.v65-pageAParent {
+					color:#000;
+					}
+				
+				#topMenu li ul li a:hover {
+					color:#000;
+					background-color:#999;
+					}
+				
+				#topMenu li.v65-home {
+					display:none;
+					}
+		
+				/*display:none; if you want to hide the homepage link*/
+				#topMenu li a.v65-pageAParent {
+					color:#fff;
+					font-weight:700;
+					}
+				
+				#topMenu li a.v65-selected {
+					color:#fff;
+					font-weight:700;
+					}
+					
+				#topMenu li li a.v65-selected {
+					color:#000;
+					font-weight:700;
+					}
+				
+
+#leftMenu {
+	width:240px;
+	float:left;
+	padding:125px 0 20px 10px;
+	}
+
+	#leftMenu ul {
+		list-style:none;
+		margin:0 0 1em 10px;
+		padding:0;
+		width:220px;
+		}
+
+		#leftMenu li {
+			line-height:2;
+			}
+		
+			#leftMenu li a {
+				color:#999;
+				}
+			
+				#leftMenu li a:hover {
+					color:#fff;
+					}
+
+		#leftMenu li ul {
+			margin-left:20px;
+			width:200px;
+			}
+
+	#leftMenu form {
+		padding:0;
+		margin:0;
+		}
+	
+	#leftMenu fieldset {
+		border:0;
+		padding:0;
+		margin:0;
+		}
+	
+	#leftMenu input {
+		height:18px;
+		margin-right:5px;
+		}
+
+	#leftMenu li a.v65-pageAParent {
+		color:#fff;
+		}
+	
+	#leftMenu li a.v65-leftSelected {
+		color:#fff;
+		font-weight:700;
+		}
+
+/*   ===================================================================================================                                                                
+
+     5. Content
+
+======================================================================================================== */
+
+body {
+}
+
+#container {
+	position:relative;
+	width:855px;
+	margin:0 auto;
+	z-index:500;
+	}
+
+
+
+#contentWrapper {
+	overflow:hidden;
+	}
+
+	#homepageContent {
+		float:left;
+		padding:30px 0;
+		text-align:center;
+		border-top:1px solid #fff;
+		width:100%;
+		}
+
+		#contentFeaturePod {
+			float:left;
+			width:225px;
+			height:320px;
+			padding:10px;
+			box-shadow:0 0 3px 3px #fff;
+			background-color:#fff;
+			}
+		
+			.PodLeft {
+				margin:90px 20px 40px;
+				}
+			
+			.PodMid {
+				margin:90px 20px 40px;
+				}
+			
+			.PodRight {
+				margin:90px 20px 40px;
+				}
+
+
+	#pageContent {
+		float:left;
+		width:600px;
+		padding:80px 0 20px;
+		}
+	
+	#pageContentWide {
+		width:815px;
+		padding:80px 20px 20px;
+		}
+		
+/*   ===================================================================================================                                                                
+
+     6. Blog Template 
+
+======================================================================================================== */
+		
+#v65-PagingTop {
+	border-bottom:1px solid #9DA985;
+	}
+
+#blogContent {
+	float:left;
+	width:520px;
+	padding:80px 25px 0 0;
+	overflow:hidden;
+	}
+
+	#blogRightWrapper {
+		float:right;
+		width:305px;
+		padding:80px 0 0;
+		overflow:hidden;
+		}
+	
+		#blogRightWrapper-Col1 {
+			float:left;
+			width:140px;
+			padding:0 25px 0 0;
+			overflow:hidden;
+			}
+		
+		#blogRightWrapper-Col2 {
+			float:left;
+			width:140px;
+			padding:0;
+			overflow:hidden;
+			}
+
+	.v65-blogPostDate {
+		color:#A2E817;
+		}
+		
+		
+/*   ===================================================================================================                                                                
+
+     7. Print Template 
+
+======================================================================================================== */
+		
+#printBody {
+	background-image:none;
+	background-color:#FFF;
+	margin:0;
+	padding:0;
+	}
+
+	#printWrapper {
+		width:700px;
+		margin:0 auto;
+		}
+	
+		#printHeader {
+			width:700px;
+			height:150px;
+			}
+		
+		#printContent {
+			width:700px;
+			text-align:left;
+			color:#000;
+			}		
+		
+
+/*   ===================================================================================================                                                                
+
+     8. Buttons - This calls the button sprites from the local site
+            Use these styles to customize buttons if necessary
+
+======================================================================================================== */
+
+	/* OPTIONAL BUTTON STYLES regular button: */
+	button.defaultBtn {
+		background:transparent url(../images/buttons/btn_sprite.gif) no-repeat right -100px;
+		}
+	
+	button.defaultBtn span {
+		background:transparent url(../images/buttons/btn_sprite.gif) no-repeat left top;
+		}
+	
+	/* OPTIONAL BUTTON STYLES alt button: */
+	button.altBtn {
+		background:transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat right -100px;
+		}
+	
+	button.altBtn span {
+		background:transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat left top;
+		}
+	
+	/* OPTIONAL BUTTON STYLES modal button: */
+	button.modalBtn {
+		background:transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat right -50px;
+		}
+	
+	button.modalBtn span {
+		background:transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat left top;
+		}
+	
+	/* OPTIONAL BUTTON STYLES modal alt button: */
+	button.altModalBtn {
+		background:transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat right -50px;
+		}
+	
+	button.altModalBtn span {
+		background:transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat left top;
+		}
+	
+	/* OPTIONAL BUTTON STYLES large button: */
+	button.largeBtn {
+		background:transparent url(../images/buttons/btn_large_sprite.gif) no-repeat right -100px;
+		}
+	
+	button.largeBtn span {
+		background:transparent url(../images/buttons/btn_large_sprite.gif) no-repeat left top;
+		}
+	
+	/* OPTIONAL BUTTON STYLES large button: */
+	button.altLargeBtn {
+		background:transparent url(../images/buttons/btn_large_alt_sprite.gif) no-repeat right -100px;
+		}
+	
+	button.altLargeBtn span {
+		background:transparent url(../images/buttons/btn_large_alt_sprite.gif) no-repeat left top;
+		}
+	
+	/* REQUIRED LINK BUTTON STYLES: */
+	/* Link Button Normal */
+	a.linkBtn {
+		background:transparent url(../images/buttons/btn_sprite.gif) no-repeat right -100px;
+		}
+	
+	a.linkBtn span {
+		background:transparent url(../images/buttons/btn_sprite.gif) no-repeat left top;
+		}
+	
+	/* Link ALT Button Normal */
+	a.linkAltBtn {
+		background:transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat right -100px;
+		}
+	
+	a.linkAltBtn span {
+		background:transparent url(../images/buttons/btn_alt_sprite.gif) no-repeat left top;
+		}
+	
+	/* Modal Link Button Normal */
+	a.modalLinkBtn {
+		background:transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat right -50px;
+		}
+	
+	a.modalLinkBtn span {
+		background:transparent url(../images/buttons/btn_modal_sprite.gif) no-repeat left top;
+		}
+	
+	/* Modal Link ALT Button Normal */
+	a.modalLinkAltBtn {
+		background:transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat right -50px;
+		}
+	
+	a.modalLinkAltBtn span {
+		background:transparent url(../images/buttons/btn_modal_alt_sprite.gif) no-repeat left top;
+		}
+	
+	/* Link Button Large */
+	a.largeLinkBtn {
+		background:transparent url(../images/buttons/btn_large_sprite.gif) no-repeat right -100px;
+		}
+	
+	a.largeLinkBtn span {
+		background:transparent url(../images/buttons/btn_large_sprite.gif) no-repeat left top;
+		}	
+		
+/*   ===================================================================================================                                                                
+
+     9. Footer
+
+======================================================================================================== */
+
+#footer {
+	width:855px;
+	overflow:hidden;
+	padding:1em 0;
+	text-align:center;
+	border-top:1px solid #999;
+	}
+
+	#footer ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+		overflow:hidden;
+		}
+
+		#footer ul li {
+			display:inline;
+			margin:0;
+			padding:0;
+			}
+
+			#footer ul li a {
+				font-size:.917em;
+				color:#fff;
+				position:relative;
+				display:inline-block;
+				text-decoration:none;
+				margin:0;
+				padding-right:10px;
+				}
+			
+				#footer ul li a:hover {
+					color:#fff;
+					text-decoration:underline;
+					}
+
+		#footer ul li:after {
+			content:"|";
+			padding:0 8px 0 0;
+			}
+		
+		#footer ul li:last-child:after {
+			content:"";
+			}
+	
+	#footer p {
+		clear:both;
+		font-size:.917em;
+		color:#fff;
+		}
+	
+	#footer a {
+		color:#fff;
+		}
+	
+	#footer a:hover {
+		color:#fff;
+		}
+
+
+
+/*   ===================================================================================================                                                                
+
+     10. V65 Overrides
+
+======================================================================================================== */
+
+.v65-product2Up {
+	width:280px;
+	}
+
+.v65-product2UpAddToCart form {
+	width:280px;
+	}
+
+.v65-product2UpFormPrice {
+	width:55px;
+	}
+
+.v65-product2UpFormSKU {
+	width:65px;
+	}
+
+.v65-product2UpAddToCart fieldset {
+	border:1px solid #9DA985;
+	}
+
+#v65-productAddToCart fieldset {
+	border:1px solid #9DA985;
+	}
+
+.v65-socialMediaBar {
+	background-color:#fff;
+	}
+
+#v65-productDescription {
+	width:560px;
+	}
+
+.v65-Paging li.border {
+	border-right:1px solid #D8DECD;
+	}
+
+/* -----Modal Cart----- */
+a#v65-toggleModalCart {
+	display:block;
+	padding:0 0 0 24px;
+	}
+
+#v65-modalContent {
+	color:#000;
+	}
+	
+
+.v65-form fieldset {
+}
+
+.v65-cartItem {
+	background:none;
+	}
+
+#v65-checkoutCartSummaryWrapper {
+	color:#000;
+	}
+
+#v65-fieldset-paymentMethod{
+	float:left;
+	width:400px;
+	}
+
+form#v65-checkBilling .v65-additionalComments {
+	float:none;
+	margin-left:10px;
+	padding:15px 0 0;
+	width:390px;
+	}
+
+#v65-signUpClubSummaryWrapper{
+    float: right;
+    margin-bottom: 20px;
+    position: relative;
+	}
+	
+#pageContentWide #v65-cartTable, #pageContentWide #v65-cartTable th, #pageContentWide #v65-cartSubtotal td, #pageContentWide .v65-cartTax td, #pageContentWide #v65-cartTotal td{
+	background:none;
+	color:#fff;
+	}
+	
+#v65-checkoutCartSummaryWrapper h1, #v65-checkoutCartSummaryWrapper h2, #v65-checkoutCartSummaryWrapper h3, 
+#v65-checkoutCartSummaryWrapper h4, #v65-checkoutCartSummaryWrapper h5, #v65-checkoutCartSummaryWrapper h6, #v65-checkoutCartSummaryWrapper legend{
+	color:#000;
+	}
+	
+#v65-checkoutCartSummaryWrapper a{
+	color:#000;
+	text-decoration:underline;
+	}
