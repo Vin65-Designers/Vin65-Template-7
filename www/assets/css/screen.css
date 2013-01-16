@@ -104,7 +104,6 @@ h6 {
 
 a {
 	color:#333;
-	text-decoration:none;
 	}
 
 a:hover,a:focus,a:active {
@@ -437,9 +436,7 @@ body {
 			overflow:hidden;
 			}
 
-	.v65-blogPostDate {
-		color:#A2E817;
-		}
+	.v65-blogPostDate {}
 		
 		
 /*   ===================================================================================================                                                                
@@ -671,7 +668,7 @@ body {
 	}
 
 .v65-socialMediaBar {
-	background-color:#fff;
+	background-color:none;
 	}
 
 #v65-productDescription {
