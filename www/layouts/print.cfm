@@ -1,5 +1,4 @@
-<cfoutput> 
-<!DOCTYPE html>
+<cfoutput> <!DOCTYPE html>
 <html>
 <head>
   
@@ -11,29 +10,29 @@
 	
 	<cf_vin65GlobalAssets>
 	
-	<link rel="stylesheet" type="text/css" href="/assets/css/screen.css">
-	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/assets/css/ie7.css"><![endif]-->
-	<!--[if IE 8]><link rel="stylesheet" type="text/css" href="/assets/css/ie8.css"><![endif]-->
-
+	<cf_css files="/assets/css/screen.css" media="screen">
+	<!--[if IE 7]><cf_css files="/assets/css/ie7.css" media="screen"><![endif]-->
+	<!--[if IE 8]><cf_css files="/assets/css/ie8.css" media="screen"><![endif]-->
+	
 </head>
 <body id="printBody">
 
 	<div id="printWrapper">
 	
-		<div id="printHeader"><img src="/assets/images/email/header.gif" alt="Template 1" width="700" height="150"></div>
+		<div id="printHeader"><img src="/assets/images/email/header.gif" alt="<cf_websiteName>" width="700" height="150"></div>
 		
 		<div id="printContent">
 			<cf_mainContent>
 		</div>
+
+		<p style="text-align: center;">
+			<span style="font-weight: bold;">Template 9</span><br>
+			111 North Street, Our City, CA (707) 888-9090
+		</p>
 	
 	</div>	
-	
-	<!---Analytics--->
-	<cf_googleAnalytics>	
-	<!---/Analytics--->
 	
 	<cf_vin65GlobalFooterAssets>
 
 </body>
-</html>
- </cfoutput>
+</html> </cfoutput>
